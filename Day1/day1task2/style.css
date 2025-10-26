@@ -1,0 +1,31 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fbff;
+  color: #333;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.welcome p {
+  font-size: 1.1rem;
+  color: #180909;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

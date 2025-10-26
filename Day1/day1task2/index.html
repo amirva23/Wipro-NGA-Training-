@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Flowers School</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="bg-primary text-white text-center p-3 shadow">
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="logo.png" alt="School Logo" class="logo me-3" />
+      <h1 class="m-0">Spring Flowers School</h1>
+    </div>
+    <nav class="mt-3">
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#profile">Student Profile</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#timetable">Time Table</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container mt-5" id="home">
+    <section class="welcome text-center mb-5">
+      <h2>HELLO STUDENT !</h2>
+      <p>Welcome to your student portal. You can check your profile and school information here.</p>
+      <button class="btn btn-primary mt-3" onclick="showProfile()">View My Profile</button>
+    </section>
+
+    <section id="profile" class="profile text-center d-none">
+      <div class="card mx-auto shadow p-4" style="max-width: 350px;">
+        <h3>Student Profile</h3>
+        <p><strong>Name:</strong> Amirtha Varshini S</p>
+        <p><strong>Class:</strong> ECE - A</p>
+        <p><strong>Roll No:</strong> 15</p>
+        <p><strong>Email:</strong> tharshanamirva@gmail.com</p>
+      </div>
+    </section>
+
+    <section id="timetable" class="timetable text-center d-none mt-5">
+      <h3>Weekly Time Table</h3>
+      <div class="table-responsive mt-3">
+        <table class="table table-bordered table-striped mx-auto" style="max-width: 600px;">
+          <thead class="table-primary">
+            <tr>
+              <th>Day</th>
+              <th>1st Period</th>
+              <th>2nd Period</th>
+              <th>3rd Period</th>
+              <th>4th Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>Maths</td><td>English</td><td>Physics</td><td>Games</td></tr>
+            <tr><td>Tuesday</td><td>Chemistry</td><td>Biology</td><td>Maths</td><td>Computer</td></tr>
+            <tr><td>Wednesday</td><td>English</td><td>Physics</td><td>Chemistry</td><td>Library</td></tr>
+            <tr><td>Thursday</td><td>Maths</td><td>Computer</td><td>Biology</td><td>Sports</td></tr>
+            <tr><td>Friday</td><td>English</td><td>Maths</td><td>Drawing</td><td>Games</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary text-white text-center p-3 mt-5">
+    <p>© 2025 Spring Flowers School | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showProfile() {
+      document.getElementById('profile').classList.toggle('d-none');
+    }
+
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('section').forEach(sec => sec.classList.add('d-none'));
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.classList.remove('d-none');
+      });
+    });
+  </script>
+</body>
+</html>
