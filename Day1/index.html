@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Flowers School</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="School Logo" class="logo" />
+    <h1>Welcome to Spring Flowers School</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Student Profile</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="welcome">
+      <h2>Hello Student!</h2>
+      <p>Welcome to your student portal. You can check your profile and school information here.</p>
+      <button onclick="showProfile()">View My Profile</button>
+    </section>
+
+    <section id="profile" class="profile hidden">
+      <h2>Student Profile</h2>
+      <div class="card">
+        <p><strong>Name:</strong> Amirtha Varshini S</p>
+        <p><strong>Class:</strong> ECE - A</p>
+        <p><strong>Roll No:</strong> 21 </p>
+        <p><strong>Email:</strong> tharshanamirva@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>© 2025 Spring Flowers School | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showProfile() {
+      document.querySelector('.profile').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
