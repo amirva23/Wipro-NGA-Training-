@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Flowers School - Student Management</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-primary text-white text-center p-3 shadow">
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="Schoollogo.svg" alt="School Logo" class="logo me-3" />
+
+      <h1>Spring Flowers School</h1>
+    </div>
+  </header>
+
+  <!-- LOGIN PAGE -->
+  <section id="loginSection" class="container mt-5">
+    <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px;">
+      <h3 class="text-center mb-3">Login</h3>
+      <input type="text" id="loginUsername" class="form-control mb-3" placeholder="Enter Username">
+      <input type="password" id="loginPassword" class="form-control mb-3" placeholder="Enter Password">
+      <button class="btn btn-primary w-100" onclick="login()">Login</button>
+      <p class="text-center mt-3">Don't have an account? 
+        <a href="#" onclick="showRegister()">Register here</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- REGISTER PAGE -->
+  <section id="registerSection" class="container mt-5 d-none">
+    <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px;">
+      <h3 class="text-center mb-3">Register</h3>
+      <input type="text" id="regUsername" class="form-control mb-3" placeholder="Create Username">
+      <input type="password" id="regPassword" class="form-control mb-3" placeholder="Create Password">
+      <button class="btn btn-success w-100" onclick="register()">Register</button>
+      <p class="text-center mt-3">Already have an account? 
+        <a href="#" onclick="showLogin()">Login</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN APP -->
+  <section id="mainApp" class="d-none">
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold">🌸 Spring Flowers</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#" onclick="showSection('homeSection')">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('profileSection')">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('timetableSection')">Time Table</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('activitySection')">Monthly Activity</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="#" onclick="logout()">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="homeSection" class="container text-center mt-5">
+      <h2>Welcome, <span id="studentName"></span> 🎉</h2>
+      <p class="mt-3">This is your student portal. You can view your profile, timetable, and monthly activities below.</p>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section id="profileSection" class="container mt-5 d-none text-center">
+      <h3>Student Profile</h3>
+      <div class="card mx-auto shadow p-4 mt-3" style="max-width: 400px;">
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Class:</strong> ECE - A</p>
+        <p><strong>Roll No:</strong> 21</p>
+        <p><strong>Email:</strong> student@example.com</p>
+      </div>
+    </section>
+
+    <!-- TIMETABLE SECTION -->
+    <section id="timetableSection" class="container mt-5 d-none">
+      <h3 class="text-center mb-4">Weekly Time Table</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center">
+          <thead class="table-primary">
+            <tr><th>Day</th><th>1st</th><th>2nd</th><th>3rd</th><th>4th</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mon</td><td>Maths</td><td>English</td><td>Tamil</td><td>History</td></tr>
+            <tr><td>Tue</td><td>Physics</td><td>Chemistry</td><td>Biology</td><td>Library</td></tr>
+            <tr><td>Wed</td><td>Maths</td><td>Computer</td><td>English</td><td>Sports</td></tr>
+            <tr><td>Thu</td><td>Drawing</td><td>Maths</td><td>Science</td><td>Computer</td></tr>
+            <tr><td>Fri</td><td>English</td><td>Biology</td><td>Chemistry</td><td>Maths</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- MONTHLY ACTIVITY SECTION -->
+    <section id="activitySection" class="container mt-5 d-none">
+      <h3 class="text-center mb-3">Monthly Activities</h3>
+      <div class="d-flex justify-content-center mb-3 flex-wrap">
+        <select id="subjectSelect" class="form-select w-auto me-2">
+          <option value="">Select Subject</option>
+          <option value="Maths">Maths</option>
+          <option value="Science">Science</option>
+          <option value="English">English</option>
+        </select>
+        <button class="btn btn-primary" onclick="showActivities()">Show</button>
+      </div>
+      <div id="activityList" class="mx-auto" style="max-width: 600px;"></div>
+    </section>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white text-center p-3 mt-5">
+    <p>© 2025 Spring Flowers School | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // User data storage
+    let users = [];
+    let currentUser = "";
+
+    // Activities array
+    const activities = [
+      { id: 1, activity: "Complete exercise 5–10 from Chapter 2", subject: "Maths" },
+      { id: 2, activity: "Perform Water Filtration Experiment", subject: "Science" },
+      { id: 3, activity: "Write an essay on Global Warming", subject: "English" },
+      { id: 4, activity: "Solve geometry questions from page 32", subject: "Maths" },
+      { id: 5, activity: "Revise Chapter 4 - Motion", subject: "Science" }
+    ];
+
+    // Registration
+    function register() {
+      const username = document.getElementById("regUsername").value.trim();
+      const password = document.getElementById("regPassword").value.trim();
+      if (username && password) {
+        users.push({ username, password });
+        alert("Registration successful!");
+        showLogin();
+      } else {
+        alert("Please fill all fields.");
+      }
+    }
+
+    // Login
+    function login() {
+      const username = document.getElementById("loginUsername").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
+      const user = users.find(u => u.username === username && u.password === password);
+      if (user) {
+        currentUser = username;
+        document.getElementById("studentName").innerText = username;
+        document.getElementById("profileName").innerText = username;
+        showMainApp();
+      } else {
+        alert("Invalid credentials or user not found.");
+      }
+    }
+
+    function logout() {
+      alert("Logged out successfully!");
+      showLogin();
+    }
+
+    // Show monthly activities
+    function showActivities() {
+      const subject = document.getElementById("subjectSelect").value;
+      const list = document.getElementById("activityList");
+      list.innerHTML = "";
+      if (subject) {
+        const filtered = activities.filter(a => a.subject === subject);
+        filtered.length
+          ? filtered.forEach(a => {
+              const div = document.createElement("div");
+              div.className = "alert alert-info text-start";
+              div.innerText = `${a.subject}: ${a.activity}`;
+              list.appendChild(div);
+            })
+          : (list.innerHTML = `<div class='alert alert-warning'>No activities found for ${subject}</div>`);
+      } else {
+        alert("Please select a subject.");
+      }
+    }
+
+    // Section controls
+    function showSection(id) {
+      document.querySelectorAll("#mainApp section").forEach(sec => sec.classList.add("d-none"));
+      document.getElementById(id).classList.remove("d-none");
+    }
+
+    // Navigation visibility
+    function showMainApp() {
+      ["loginSection", "registerSection"].forEach(id => document.getElementById(id).classList.add("d-none"));
+      document.getElementById("mainApp").classList.remove("d-none");
+      showSection("homeSection");
+    }
+
+    function showRegister() { showHideSections("registerSection"); }
+    function showLogin() { showHideSections("loginSection"); }
+
+    function showHideSections(id) {
+      ["loginSection", "registerSection", "mainApp"].forEach(sec => document.getElementById(sec).classList.add("d-none"));
+      document.getElementById(id).classList.remove("d-none");
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

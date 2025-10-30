@@ -1,0 +1,121 @@
+/* ===== Overall Page Theme ===== */
+body {
+  font-family: "Comic Sans MS", "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #fffdf0, #fff8b0);
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ===== Header & Navbar ===== */
+header,
+nav.navbar {
+  background-color: #ffeb3b !important; /* bright yellow */
+  color: #000 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove Bootstrap’s default blue background */
+.bg-primary {
+  background-color: #ffeb3b !important; /* replace Bootstrap blue with yellow */
+  color: #000 !important;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+  background-color: #ffb300 !important; /* orange-yellow hover */
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+/* ===== Logo ===== */
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Cards (login/register boxes etc.) ===== */
+.card {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Table Styling ===== */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.table th {
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #fffbe6;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #fffde7;
+}
+
+/* ===== Alerts (activities, info boxes) ===== */
+.alert {
+  border-radius: 10px;
+  background-color: #fff9c4;
+  border: 1px solid #ffecb3;
+  color: #000;
+}
+
+/* ===== Buttons ===== */
+button,
+.btn {
+  border-radius: 10px !important;
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+  border: none !important;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #ffb300 !important;
+  color: #fff !important;
+}
+
+/* ===== Footer ===== */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* ===== Responsive Text ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .table {
+    font-size: 0.9rem;
+  }
+}
