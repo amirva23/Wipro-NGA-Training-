@@ -1,0 +1,102 @@
+<!-- Here we will connect to MongoDB Atlas, implementing CRUD operations on EduProDB which consists of courses and students, 
+ Instructor and enrollment collections -->
+
+ <!-- Step 1: Connect to MongoDB Atlas via Connection string  -->
+  <!-- Step 2: Implement CRUD operations -->
+    <!-- Step 3: Display data dynamically on the web page using DOM manipulation -->
+     <!-- Step 4: Implement search functionality -->
+      <!-- Step 5 Close the connection to MongoDB Atlas -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Adding bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Course Management System - MongoDB Atlas Demo</h1>
+        <div id="course-list" class="mt-4">
+            <!-- Course data will be dynamically inserted here -->
+        </div>
+
+        <!-- Creating a form where user can enter connection string at run time for connecting it with MongoDB Atlas -->
+        <form id="connection-form" class="mt-4">
+            <div class="form-group">
+                <label for="connection-string">MongoDB Atlas Connection String</label>
+                <input type="text" class="form-control" id="connection-string" placeholder="Enter your connection string">
+            </div>
+            <button type="submit" class="btn btn-primary">Connect</button>
+            <!-- Displaying the status of connection -->
+            <div id="connection-status" class="mt-2"></div>
+        </form>
+
+    Step 1: Connect to MongoDB Atlas via Connection string 
+   <script>
+async function fetchCourses() {
+    try {
+        const response = await fetch("http://localhost:4000/courses");
+        const data = await response.json();
+
+        const courseContainer = document.getElementById("course-list");
+        courseContainer.innerHTML = "";
+
+        data.forEach(course => {
+            courseContainer.innerHTML += `
+                <div class="card mb-2 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">${course.title}</h5>
+                        <p class="card-text">${course.description}</p>
+                    </div>
+                </div>`;
+        });
+    } catch (error) {
+        console.error("Error fetching courses:", error);
+    }
+}
+
+// Call the function on page load
+window.onload = fetchCourses;
+</script>
+<script>
+async function fetchCourses() {
+    try {
+        const response = await fetch("http://localhost:4000/courses");
+        const data = await response.json();
+
+        const courseContainer = document.getElementById("course-list");
+        courseContainer.innerHTML = "";
+
+        data.forEach(course => {
+            courseContainer.innerHTML += `
+                <div class="card mb-2 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">${course.title}</h5>
+                        <p class="card-text">${course.description}</p>
+                    </div>
+                </div>`;
+        });
+    } catch (error) {
+        console.error("Error fetching courses:", error);
+    }
+}
+
+window.onload = fetchCourses;
+</script>
+
+
+    
+
+    <!-- Adding header and footer for the application via bootstrap -->
+    <footer class="mt-4">
+        <div class="container">
+            <p class="text-center">© 2025 Course Management System </p>
+        </div>
+    </footer>
+
+</body>
+</html>
