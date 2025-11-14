@@ -1,0 +1,5 @@
+ A fulfilled promise is a promise whose operation completed successfully and produced a value.
+
+A resolved promise means the promise is settled—either fulfilled OR rejected. 
+                 So "fulfilled" = success, 
+                     "resolved" = completed (success OR failure).
