@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+}
+
+.book-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.list-view .book-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-view img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
