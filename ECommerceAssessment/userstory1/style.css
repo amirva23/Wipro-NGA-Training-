@@ -1,0 +1,48 @@
+/* style.css - for Home Page styling */
+
+/* General page look */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #343a40, #495057);
+}
+
+/* Product card */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image fit */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Newsletter form */
+section.bg-light {
+    border-top: 2px solid #dee2e6;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+}
+
+/* Responsive form adjustment */
+@media (max-width: 768px) {
+    #newsletterForm input {
+        width: 60%;
+    }
+}

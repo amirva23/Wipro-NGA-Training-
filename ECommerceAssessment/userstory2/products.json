@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "Smart Watch", "category": "electronics", "price": 2999, "image": "https://via.placeholder.com/200x200?text=Smart+Watch" },
+  { "id": 2, "name": "Bluetooth Speaker", "category": "electronics", "price": 899, "image": "https://via.placeholder.com/200x200?text=Speaker" },
+  { "id": 3, "name": "T-Shirt", "category": "fashion", "price": 499, "image": "https://via.placeholder.com/200x200?text=T-Shirt" },
+  { "id": 4, "name": "Sneakers", "category": "fashion", "price": 1499, "image": "https://via.placeholder.com/200x200?text=Sneakers" },
+  { "id": 5, "name": "Vacuum Cleaner", "category": "home", "price": 3999, "image": "https://via.placeholder.com/200x200?text=Vacuum+Cleaner" },
+  { "id": 6, "name": "Microwave Oven", "category": "home", "price": 6999, "image": "https://via.placeholder.com/200x200?text=Microwave" }
+]
