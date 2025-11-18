@@ -1,0 +1,70 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Silent Path",
+      "author": "Ava Reed",
+      "price": 499,
+      "genre": "Fiction",
+      "image": "https://m.media-amazon.com/images/I/615S0HqeCHL._SY425_.jpg",
+      "description": "A deeply emotional journey of love, loss, and redemption that explores how silence speaks louder than words.",
+      "authorBio": "Ava Reed is an award-winning novelist known for her lyrical storytelling and ability to bring raw emotions to life.",
+      "topBooks": ["Whispers of Dawn", "Beyond the Horizon", "Fading Echoes"]
+    },
+    {
+      "id": 2,
+      "title": "Code Chronicles",
+      "author": "Liam Carter",
+      "price": 399,
+      "genre": "Technology",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      "description": "A fascinating deep dive into the world of programmers, innovation, and the challenges of building the digital future.",
+      "authorBio": "Liam Carter is a software engineer turned author who blends technology and storytelling seamlessly.",
+      "topBooks": ["Tech Unplugged", "Binary Dreams", "The Algorithm's Edge"]
+    },
+    {
+      "id": 3,
+      "title": "Winds of Eternity",
+      "author": "Sophia Blake",
+      "price": 599,
+      "genre": "Fantasy",
+      "image": "https://m.media-amazon.com/images/I/717+3-Yrl3L._SL1360_.jpg",
+      "description": "An epic saga of kingdoms, courage, and destiny where ancient prophecies collide with the power of hope.",
+      "authorBio": "Sophia Blake is a fantasy writer celebrated for her rich world-building and strong, complex characters.",
+      "topBooks": ["Shadows of the Realm", "Crown of Ashes", "The Silver Flame"]
+    },
+    {
+      "id": 4,
+      "title": "The Art of Stillness",
+      "author": "Noah Hale",
+      "price": 349,
+      "genre": "Self-help",
+      "image": "https://m.media-amazon.com/images/I/61-bIMPK8FL._SL1500_.jpg",
+      "description": "A mindful exploration of slowing down in a fast-paced world to find meaning and inner peace.",
+      "authorBio": "Noah Hale is a mindfulness coach and author, inspiring readers to embrace calmness through minimalism and meditation.",
+      "topBooks": ["Calm Within Chaos", "Moments of Pause", "The Gentle Way"]
+    },
+    {
+      "id": 5,
+      "title": "Hidden Truths",
+      "author": "Clara Woods",
+      "price": 449,
+      "genre": "Mystery",
+      "image": "https://m.media-amazon.com/images/I/71-HtkYW0SL._SY466_.jpg",
+      "description": "A gripping thriller where every truth hides a deeper lie, and every clue leads closer to danger.",
+      "authorBio": "Clara Woods is a bestselling mystery author known for her intricate plots and strong female leads.",
+      "topBooks": ["The Glass Room", "Echoes in the Dark", "The Last Witness"]
+    },
+    {
+      "id": 6,
+      "title": "Cosmic Voyage",
+      "author": "Ethan Cross",
+      "price": 559,
+      "genre": "Science Fiction",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+      "description": "A thrilling interstellar adventure that questions humanity’s place in the universe.",
+      "authorBio": "Ethan Cross is a science fiction writer passionate about space exploration and future technologies.",
+      "topBooks": ["Starlight Divide", "Quantum Drift", "Nebula Rising"]
+    }
+  ]
+}
