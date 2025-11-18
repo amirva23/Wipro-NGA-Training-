@@ -1,0 +1,16 @@
+body.light {
+  background: #f8f9fa;
+  color: #222;
+}
+body.dark {
+  background: #121212;
+  color: #e6e6e6;
+}
+
+/* card example that respects theme */
+.card {
+  background: var(--card-bg);
+  color: inherit;
+}
+
+/* you can set variables in JS or further style classes */

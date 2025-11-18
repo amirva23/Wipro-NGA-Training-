@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  text-align: center;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.light {
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #e91f62;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tracker {
+  margin-top: 40px;
+}
+
+.tracker-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tracker-buttons button:nth-child(2) {
+  background: #da0909;
+}
+
+.tracker-buttons button:nth-child(3) {
+  background: #2df168;
+}
+
+.offline-banner {
+  background: #ff4444;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
