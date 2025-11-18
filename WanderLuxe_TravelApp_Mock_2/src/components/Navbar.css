@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px;
+  background: #ffffff88;
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  margin: 10px 10px;
+  font-size: 60px;
+  font-weight: 850;
+  color: #ce1b74;
+}
+
+.links a {
+  margin: 10px 10px;
+  font-size: 40px;
+  text-decoration:  none;
+  font-weight: 500;
+  color: #df1a76;
+}
+
+.links a:hover {
+  color:#cfc6cb;
+}
