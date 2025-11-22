@@ -1,0 +1,32 @@
+body {
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Center content and limit width */
+.app-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Block spacing between components */
+.component-box {
+  margin-bottom: 35px;
+}
+
+/* Make all components match style automatically */
+.component-box > * {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
