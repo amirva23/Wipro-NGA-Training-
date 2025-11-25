@@ -1,0 +1,65 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #eef2f3 0%, #ffffff 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR STYLE */
+.navbar {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* PRODUCT CARD STYLING */
+.product-card {
+  border: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #ffffff;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+}
+
+/* IMAGE STYLE */
+.product-img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* PRICE TEXT */
+.price-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d7359;
+}
+
+/* BUTTON STYLES */
+.view-btn,
+.fav-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.add-btn {
+  font-size: 18px;
+  border-radius: 12px;
+  padding: 10px 18px;
+}
